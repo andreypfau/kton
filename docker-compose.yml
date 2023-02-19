@@ -1,0 +1,10 @@
+version: "2.1"
+services:
+  kton-app:
+    container_name: "kton-app"
+    build: .
+    environment:
+      - KTON_DATA_DIR=/var/lib/kton-app
+      - KTON_USE_LITESERVER_CACHE=true
+    volumes:
+      - ~/kton/app/data:/var/lib/kton-app
